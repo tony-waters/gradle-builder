@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  gradle-builder:
+    container_name: gradle-builder
+    image: bit1/gradle-builder
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+
+
