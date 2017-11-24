@@ -29,4 +29,6 @@ gradle install
 #./gradlew install
 
 echo "---> Copying built application to app-root..."
-cp -a /opt/app-root/src/build/libs/*.jar /opt/app-root/app.jar
+cp -a /opt/app-root/src/sta-web/build/libs/sta-web-6.0.0-SNAPSHOT.jar /opt/app-root/app.jar
+
+
