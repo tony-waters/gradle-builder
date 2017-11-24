@@ -24,7 +24,7 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 
 echo "---> Building application from source..."
-export GRADLE_OPTS="-Dorg.gradle.daemon=false"
+#export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 gradle build -x test
 #./gradlew install
 
