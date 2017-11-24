@@ -29,6 +29,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 # S2I scripts
 COPY ./s2i/bin/ /usr/libexec/s2i
 RUN chmod -R +x /usr/libexec/s2i/
+RUN chown -R 1001:1001 /usr/libexec/s2i
 
 RUN ls -la /usr/libexec/s2i
 
