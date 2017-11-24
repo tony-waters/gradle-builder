@@ -29,7 +29,7 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/* ./
 cp -Rf /tmp/src/.[^.]* ./
 chown -R 1001:1001 ./
-chown -R 1001:1001 /tml/src
+chown -R 1001:1001 /tmp/src
 
 echo "---> Peeking inside"
 ls -la /tmp/src
