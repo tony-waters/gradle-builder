@@ -24,9 +24,9 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 
 echo "---> Building application from source..."
-export GRADLE_OPTS="-Dorg.gradle.daemon=false"
-gradle install --debug
-#./gradlew install
+#export GRADLE_OPTS="-Dorg.gradle.daemon=false"
+#gradle install --debug
+./gradlew install --debug
 
 echo "---> Copying built application to app-root..."
 cp -a /opt/app-root/src/sta-web/build/libs/sta-web-6.0.0-SNAPSHOT.jar /opt/app-root/app.jar
