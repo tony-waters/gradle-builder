@@ -28,7 +28,7 @@ echo "---> Installing application source..."
 #cp -Rf /tmp/src/. ./
 cp -Rf /tmp/src/* ./
 cp -Rf /tmp/src/.[^.]* ./
-cp -Rf /tmp/src/.git ./
+#cp -Rf /tmp/src/.git ./
 chown -R 1001:1001 ./
 chown -R 1001:1001 /tmp/src
 
