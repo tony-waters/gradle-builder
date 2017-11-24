@@ -1,4 +1,7 @@
-#!/bin/bash -e
+#!/bin/bash
+#
+#
+# -e
 
 set -e
 shopt -s dotglob
