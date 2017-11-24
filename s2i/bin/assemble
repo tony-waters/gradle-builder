@@ -1,7 +1,4 @@
-#!/bin/bash
-#
-#
-# -e
+#!/bin/bash +e
 
 set -e
 shopt -s dotglob
@@ -38,7 +35,7 @@ chown -R 1001:1001 /tmp/src
 echo "---> Peeking inside"
 ls -la /tmp/src
 ls -la ./
-ls -la ./.git
+#ls -la ./.git
 
 echo "---> Building application from source..."
 export GRADLE_OPTS="-Dorg.gradle.daemon=false"
