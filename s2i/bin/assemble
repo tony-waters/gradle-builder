@@ -21,7 +21,9 @@ if [ -d /tmp/artifacts/.gradle ]; then
 fi
 
 echo "---> Installing application source..."
-cp -Rf /tmp/src/. ./
+#cp -Rf /tmp/src/. ./
+cp -rf /tmp/src/* ./
+cp -rf /tmp/src/.[^.]* ./
 
 echo "---> Building application from source..."
 #export GRADLE_OPTS="-Dorg.gradle.daemon=false"
