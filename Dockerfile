@@ -34,8 +34,8 @@ RUN chown -R 1001:1001 /usr/libexec/s2i
 RUN ls -la /usr/libexec/s2i
 
 RUN chown -R 1001:1001 /opt/app-root
-USER 1001
-
+#USER 1001
+USER root
 EXPOSE 8080
 
 CMD ["/usr/libexec/s2i/usage"]
