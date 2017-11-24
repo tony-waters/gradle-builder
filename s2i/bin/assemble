@@ -20,10 +20,18 @@ if [ -d /tmp/artifacts/.gradle ]; then
   mv /tmp/artifacts/.gradle "$HOME"/
 fi
 
+echo "---> Peeking inside"
+ls -la /tmp/src
+ls -la ./
+
 echo "---> Installing application source..."
 #cp -Rf /tmp/src/. ./
-cp -rf /tmp/src/* ./
-cp -rf /tmp/src/.[^.]* ./
+cp -Rf /tmp/src/* ./
+cp -Rf /tmp/src/.[^.]* ./
+
+echo "---> Peeking inside"
+ls -la /tmp/src
+ls -la ./
 
 echo "---> Building application from source..."
 #export GRADLE_OPTS="-Dorg.gradle.daemon=false"
