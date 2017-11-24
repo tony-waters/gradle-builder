@@ -43,6 +43,6 @@ export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 ./gradlew install #--debug
 
 echo "---> Copying built application to app-root..."
-cp -a /opt/app-root/src/sta-web/build/libs/*.jar /opt/app-root/app.jar
+cp -a /opt/app-root/src/build/libs/*.jar /opt/app-root/app.jar
 
 
