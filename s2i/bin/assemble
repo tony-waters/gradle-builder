@@ -40,9 +40,9 @@ ls -la ./
 echo "---> Building application from source..."
 export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 #gradle build -x test
-./gradlew build #--debug
+./gradlew install #--debug
 
 echo "---> Copying built application to app-root..."
-cp -a /opt/app-root/src/sta-web/build/libs/sta-web-6.0.0-SNAPSHOT.jar /opt/app-root/app.jar
+cp -a /opt/app-root/src/sta-web/build/libs/*.jar /opt/app-root/app.jar
 
 
