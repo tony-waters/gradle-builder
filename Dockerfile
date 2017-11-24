@@ -17,11 +17,11 @@ RUN INSTALL_PKGS="java-1.8.0-openjdk java-1.8.0-openjdk-devel" && \
     mkdir -p /opt/s2i/destination
 
 # Install Gradle
-RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
-    mkdir /opt/gradle && \
-    unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip && \
-    rm gradle-${GRADLE_VERSION}-bin.zip && \
-    ln -s /opt/gradle/gradle-${GRADLE_VERSION}/bin/gradle /usr/local/bin/gradle
+#RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
+#    mkdir /opt/gradle && \
+#    unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip && \
+#    rm gradle-${GRADLE_VERSION}-bin.zip && \
+#    ln -s /opt/gradle/gradle-${GRADLE_VERSION}/bin/gradle /usr/local/bin/gradle
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
