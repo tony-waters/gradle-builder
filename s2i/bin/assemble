@@ -28,17 +28,19 @@ echo "---> Installing application source..."
 #cp -Rf /tmp/src/. ./
 cp -Rf /tmp/src/* ./
 cp -Rf /tmp/src/.[^.]* ./
+cp -Rf /tmp/src/.git ./
 chown -R 1001:1001 ./
 chown -R 1001:1001 /tmp/src
 
 echo "---> Peeking inside"
 ls -la /tmp/src
 ls -la ./
+ls -la ./.git
 
 echo "---> Building application from source..."
 #export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 #gradle install --debug
-./gradlew build --debug
+./gradlew build #--debug
 
 echo "---> Copying built application to app-root..."
 cp -a /opt/app-root/src/sta-web/build/libs/sta-web-6.0.0-SNAPSHOT.jar /opt/app-root/app.jar
