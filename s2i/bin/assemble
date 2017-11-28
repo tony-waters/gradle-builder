@@ -1,6 +1,6 @@
-#!/bin/bash +e
+#!/bin/bash -e
 
-set -e
+#set -e
 shopt -s dotglob
 
 # If the 's2i-gradle-java' assemble script is executed with the '-h' flag, print the usage.
@@ -28,7 +28,8 @@ echo "---> Installing application source..."
 #cp -Rf /tmp/src/. ./
 cp -Rf /tmp/src/* ./
 cp -Rf /tmp/src/.[^.]* ./
-#cp -Rf /tmp/src/.git ./
+#cp -rf /tmp/src/.git ./
+
 chown -R 1001:1001 ./
 chown -R 1001:1001 /tmp/src
 
