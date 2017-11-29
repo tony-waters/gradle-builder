@@ -40,9 +40,9 @@ ls -la ./
 
 echo "---> Building application from source..."
 export GRADLE_OPTS="-Dorg.gradle.daemon=false"
-#gradle build -x test
+gradle build -x test
 #./gradlew install #--debug
-./gradlew build
+#./gradlew build
 
 echo "---> Copying built application to app-root..."
 cp -a /opt/app-root/src/build/libs/*.jar /opt/app-root/app.jar
