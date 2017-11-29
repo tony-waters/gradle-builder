@@ -4,7 +4,7 @@
 shopt -s dotglob
 
 echo "BUILD_ARGS is $BUILD_ARGS"
-echo "ARTIFACT_DIR is $ARTIFACT_DIR"
+echo "ARTIFACT_PATH is $ARTIFACT_PATH"
 
 # If the 's2i-gradle-java' assemble script is executed with the '-h' flag, print the usage.
 if [[ "$1" == "-h" ]]; then
