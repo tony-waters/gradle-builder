@@ -40,7 +40,6 @@ ls -la ./
 
 echo "---> Building application from source..."
 export GRADLE_OPTS="-Dorg.gradle.daemon=false"
-
 if [ -z "$BUILD_ARGS" ]; then
     echo "Setting BUILD_ARGS to 'build -x test'"
     BUILD_ARGS="build -x test"
@@ -52,6 +51,10 @@ echo "Using BUILD_ARGS $BUILD_ARGS"
 #./gradlew install #--debug
 
 echo "---> Copying built application to app-root..."
-cp -a /opt/app-root/src/build/libs/*.jar /opt/app-root/app.jar
+if [ -z "$ARTIFACT_PATH" ]; then
+    echo "Setting ARTIFACT_PATH to 'build/libs/*.jar'"
+    ARTIFACT_PATH="build/libs/*.jar"
+fi
+cp -a /opt/app-root/src/${ARTIFACT_PATH} /opt/app-root/app.jar
 
 
