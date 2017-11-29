@@ -43,7 +43,7 @@ export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 
 if [ -z "$BUILD_ARGS" ]; then
     echo "Setting BUILD_ARGS to 'build -x test'"
-    $BUILD_ARGS="build -x test"
+    BUILD_ARGS="build -x test"
 fi
 echo "Using BUILD_ARGS $BUILD_ARGS"
 ./gradlew $BUILD_ARGS
